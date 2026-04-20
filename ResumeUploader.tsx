@@ -23,10 +23,19 @@ export default function ResumeUploader({ onAnalyze, state, role, setRole, exp, s
   const [resumeText, setResumeText] = useState("");
   const [activeTab, setActiveTab] = useState<"paste" | "jd">("paste");
   const [step, setStep] = useState(0);
+  const [validationError, setValidationError] = useState("");
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const handleAnalyze = () => {
-    if (!resumeText.trim() || resumeText.length < 30) return;
+    if (!resumeText.trim()) {
+      setValidationError("Please paste your resume text before analyzing.");
+      return;
+    }
+    if (resumeText.trim().length < 30) {
+      setValidationError("Resume is too short. Please paste your full resume (at least 30 characters).");
+      return;
+    }
+    setValidationError("");
     let i = 0;
     intervalRef.current = setInterval(() => {
       setStep(prev => (prev + 1) % loadingSteps.length);
@@ -128,6 +137,13 @@ export default function ResumeUploader({ onAnalyze, state, role, setRole, exp, s
             </select>
           </div>
         </div>
+
+        {/* Validation error */}
+        {validationError && (
+          <div style={{ marginTop: 12, padding: "10px 14px", borderRadius: 10, background: "rgba(239,68,68,0.08)", border: "1px solid rgba(239,68,68,0.2)", fontSize: "0.8rem", color: "#ef4444", display: "flex", alignItems: "center", gap: 8 }}>
+            <span>⚠️</span> {validationError}
+          </div>
+        )}
 
         {/* CTA Button */}
         <motion.button

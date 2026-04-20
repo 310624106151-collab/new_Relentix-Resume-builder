@@ -65,7 +65,7 @@ export default function PaymentModal({ plan, onClose, onSuccess }: Props) {
           <div style={{ textAlign: "center", marginBottom: 18 }}>
             <div style={{ fontSize: "0.68rem", color: "var(--muted)", textTransform: "uppercase", letterSpacing: 1, fontWeight: 600, marginBottom: 12 }}>Scan to Pay</div>
             <div style={{ display: "inline-block", background: "white", padding: 12, borderRadius: 14, boxShadow: "0 4px 20px rgba(0,0,0,0.4)" }}>
-              <img src={qrUrl} alt="UPI QR Code" width={160} height={160} style={{ display: "block" }} />
+              <img src={qrUrl} alt={`UPI payment QR code for ₹${price} ${label}`} width={160} height={160} style={{ display: "block" }} />
             </div>
             <div style={{ fontSize: "0.72rem", color: "var(--muted)", marginTop: 8 }}>PhonePe · GPay · Paytm · BHIM · Any UPI app</div>
           </div>
