@@ -17,7 +17,7 @@ export default function PaywallModal({ onClose, onUpgrade }: Props) {
         <div style={{ background: "linear-gradient(135deg, #6c63ff, #7c3aed)", padding: "28px 24px", textAlign: "center" }}>
           <div style={{ fontSize: "2.5rem", marginBottom: 12 }}>🚀</div>
           <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "1.3rem", color: "white", marginBottom: 8 }}>
-            You're One Step Away from Standing Out
+            You&apos;re One Step Away from Standing Out
           </h2>
           <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.85rem" }}>Unlock the full power of Relentix</p>
         </div>

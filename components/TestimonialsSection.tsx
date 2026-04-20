@@ -28,7 +28,7 @@ export default function TestimonialsSection() {
               transition={{ delay: i * 0.07 }}
               style={{ background: "rgba(17,17,32,0.8)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: 18, padding: "22px" }}>
               <div style={{ color: "#f59e0b", fontSize: "0.85rem", marginBottom: 12, letterSpacing: 2 }}>{"★".repeat(t.rating)}</div>
-              <p style={{ fontSize: "0.84rem", lineHeight: 1.7, color: "rgba(240,240,248,0.85)", marginBottom: 18, fontStyle: "italic" }}>"{t.text}"</p>
+              <p style={{ fontSize: "0.84rem", lineHeight: 1.7, color: "rgba(240,240,248,0.85)", marginBottom: 18, fontStyle: "italic" }}>&ldquo;{t.text}&rdquo;</p>
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                 <div style={{ width: 36, height: 36, borderRadius: "50%", background: `${t.color}22`, border: `1px solid ${t.color}44`, display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontSize: "0.78rem", color: t.color, flexShrink: 0 }}>{t.avatar}</div>
                 <div>
